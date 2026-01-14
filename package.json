@@ -1,0 +1,12 @@
+{
+  "name": "fs-dev-live-coding-template",
+  "version": "1.0.0",
+  "main": "index.mts",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "tsx": "^4.21.0"
+  }
+}
