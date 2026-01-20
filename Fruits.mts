@@ -1,5 +1,12 @@
+import {Box} from "./Boxes.mjs";
+
 export abstract class Fruit {
+    public readonly boxOfOrigin: Box;
     public abstract readonly type: string;
+
+    constructor(public readonly box: Box) {
+        this.boxOfOrigin = box;
+    }
 }
 
 export class Apple extends Fruit {

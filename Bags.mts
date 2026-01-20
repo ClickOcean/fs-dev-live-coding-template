@@ -1,11 +1,9 @@
 import {Fruit} from "./Fruits.mts";
 
-abstract class Bag {
+export abstract class Bag {
     public abstract readonly color: string;
 
-    put(fruit: Fruit): void {
-        // todo
-    };
+    abstract put(fruit: Fruit): void;
 }
 
 export class RedBag extends Bag {
@@ -22,6 +20,12 @@ export class GreenBag extends Bag {
 
 export class YellowBag extends Bag {
     public readonly color = 'yellow';
+
+    put(fruit: Fruit) {
+        if(fruit.type === 'kiwi' && fruit.boxOfOrigin.type === 'plastic') {
+            throw new Error('No kiwi from plastic box!')
+        }
+    }
 }
 
 export class OrangeBag extends Bag {
