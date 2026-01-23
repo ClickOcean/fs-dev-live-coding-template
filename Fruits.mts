@@ -1,11 +1,11 @@
-import {Box} from "./Boxes.mjs";
+import {Box} from "./Boxes.mts";
 
 export abstract class Fruit {
-    public readonly boxOfOrigin: Box;
+    public readonly box: Box;
     public abstract readonly type: string;
 
-    constructor(public readonly box: Box) {
-        this.boxOfOrigin = box;
+    constructor(box: Box) {
+        this.box = box
     }
 }
 

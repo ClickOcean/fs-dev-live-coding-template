@@ -22,7 +22,7 @@ export class YellowBag extends Bag {
     public readonly color = 'yellow';
 
     put(fruit: Fruit) {
-        if(fruit.type === 'kiwi' && fruit.boxOfOrigin.type === 'plastic') {
+        if(fruit.type === 'kiwi' && fruit.box.type === 'plastic') {
             throw new Error('No kiwi from plastic box!')
         }
     }
